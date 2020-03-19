@@ -7,6 +7,10 @@ use \Core\Controller;
 class HomeController extends Controller {
 
     public function index(){
-        echo "Funcionou";
+        $dados = array(
+            'tpl' => 'default'
+        );
+
+        $this->loadTemplate('home', $dados);
     }
 }
