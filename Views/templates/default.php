@@ -17,7 +17,9 @@
     </div>
 
     <div class="container">
+    
         <?php $this->loadViewInTemplate($view, $dados); ?>
+    
     </div>
 
     <div class="rodape">
