@@ -41,9 +41,14 @@ class Core {
 
         $prefix = '\Controllers\\';
 
-        if(!file_exists("Controllers/".$currentController.".php") || !method_exists($prefix.$currentController, $currentAction)) {
-            $currentController = "NotfoundController.php";
+        if(!file_exists("Controllers/".$currentController.".php")) {
+            $pNome = explode('Controller', $currentController);
+            $pNome = $pNome[0];
+            $params = array($pNome);
+
+            $currentController = "PaginasController";
             $currentAction = "index";
+            
         }
 
         $newController = $prefix.$currentController;
