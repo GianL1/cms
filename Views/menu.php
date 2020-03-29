@@ -1,3 +1,4 @@
+
 <nav>
     <ul>
         <?php foreach ($menu as $item): ?>

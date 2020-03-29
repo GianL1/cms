@@ -18,4 +18,16 @@ class Paginas extends Model {
 
         return $array;
     }
+
+    public function getPaginas(){
+        $array = array();
+
+        $sql= $this->db->query("SELECT id, url, titulo FROM paginas");
+
+        if($sql->rowCount() > 0){
+            $array = $sql->fetchAll();
+        }
+
+        return $array;
+    }
 }
