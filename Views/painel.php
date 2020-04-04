@@ -12,6 +12,7 @@
             <a href=""><li>Páginas</li></a>
             <a href="<?php echo BASE_URL;?>painel/menus"><li>Menus</li></a>
             <a href="<?php echo BASE_URL;?>painel/logout"><li>Logout</li></a>
+            <a href="<?php echo BASE_URL;?>painel/config"><li>Configurações</li></a>
         </ul>
     </div>
 

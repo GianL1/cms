@@ -36,7 +36,7 @@ class Menu extends Model {
         
     }
 
-    public function add($nome, $url){
+    public function insert($nome, $url){
         $sql = $this->db->prepare("INSERT INTO menu SET nome =:nome, url = :url");
         $sql->bindValue(":nome", $nome);
         $sql->bindValue(":url", $url);

@@ -18,4 +18,11 @@ class Config extends Model {
 
         return $array;
     }
+
+    public function setPropriedade($nome, $valor){
+        $sql = $this->db->prepare("UPDATE config SET valor = :valor WHERE name = :name");
+        $sql->bindValue(":valor", $valor);
+        $sql->bindValue(":name", $nome);
+        $sql->execute();
+    }
 }
